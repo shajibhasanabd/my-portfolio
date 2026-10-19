@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shajib Hasan Abdullah — Professional Frontend Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-950 text-white font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800">
+        <nav class="max-w-6xl mx-auto px-5">
+            <div class="h-20 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#home" class="text-2xl font-bold tracking-tight">
+                    <span class="text-blue-500">&lt;</span> Shajib <span class="text-blue-500">/&gt;</span>
+                </a>
+                <!-- Menu -->
+                <ul class="hidden md:flex gap-8 text-sm font-medium">
+                    <li><a href="#home" class="hover:text-blue-500 transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
+                    <li><a href="#skills" class="hover:text-blue-500 transition">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-blue-500 transition">Projects</a></li>
+                    <li><a href="#testimonials" class="hover:text-blue-500 transition">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-blue-500 transition">Contact</a></li>
+                </ul>
+                <!-- Mobile button -->
+                <button id="mobile-menu-btn" class="md:hidden text-xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#home" class="block text-slate-300 hover:text-blue-500 transition">Home</a>
+            <a href="#about" class="block text-slate-300 hover:text-blue-500 transition">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-blue-500 transition">Skills</a>
+            <a href="#projects" class="block text-slate-300 hover:text-blue-500 transition">Projects</a>
+            <a href="#testimonials" class="block text-slate-300 hover:text-blue-500 transition">Testimonials</a>
+            <a href="#contact" class="block text-slate-300 hover:text-blue-500 transition">Contact</a>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20">
+        <div class="absolute w-72 h-72 bg-blue-600/20 rounded-full blur-3xl top-20 left-10 pointer-events-none"></div>
+        <div class="absolute w-72 h-72 bg-purple-600/20 rounded-full blur-3xl bottom-10 right-10 pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto px-5 w-full relative">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-blue-500 font-semibold mb-3">Hello, I'm</p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">Shajib Hasan Abdullah</h1>
+                    <h2 class="text-xl md:text-2xl font-semibold text-slate-300 mt-4">Frontend Web Developer</h2>
+                    <p class="text-slate-400 leading-7 mt-6 max-w-lg">
+                        I create modern, responsive, and user-friendly websites using HTML, CSS, JavaScript, and Tailwind CSS.
+                    </p>
+                    <div class="flex gap-4 mt-8 flex-wrap">
+                        <a href="#projects" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 transition shadow-lg shadow-blue-600/20 font-medium">
+                            View Projects
+                        </a>
+                        <a href="#contact" class="px-6 py-3 rounded-lg border border-slate-700 hover:border-blue-500 hover:text-blue-500 transition font-medium">
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="flex gap-5 mt-8 text-xl">
+                        <a href="https://github.com/shajibhasanabd" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-500 transition"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                 <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+                        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500/70 shadow-2xl shadow-blue-500/20 bg-slate-900 flex items-center justify-center">
+                            <img src="images/my image.png" alt="Shajib Hasan Abdullah" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-24 bg-slate-900/50 border-t border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-14">
+                <p class="text-blue-500 font-semibold">About Me</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Who I Am</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-5">
+                    <h3 class="text-2xl font-bold">Passionate Frontend Developer</h3>
+                    <p class="text-slate-400 leading-7">
+                        I am dedicated to crafting clean user interfaces, optimized web apps, and fully mobile-responsive layouts using Tailwind CSS and modern JavaScript.
+                    </p>
+                    <div class="grid grid-cols-2 gap-5 pt-4">
+                        <div>
+                            <p class="text-slate-500 text-sm">Name</p>
+                            <p class="font-semibold mt-1">Shajib Hasan Abdullah</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-sm">Location</p>
+                            <p class="font-semibold mt-1">Bangladesh</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-sm">Profession</p>
+                            <p class="font-semibold mt-1">Frontend Developer</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-sm">Email</p>
+                            <p class="font-semibold mt-1 text-blue-400 text-xs sm:text-sm truncate">shajib3444@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl space-y-4">
+                    <h4 class="text-xl font-bold text-blue-400">My Mission</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        To build fast, accessible, and elegant web solutions that deliver exceptional user experiences across all devices and screen sizes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="py-24 bg-slate-950 text-white">
+        <div class="max-w-6xl mx-auto px-5">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <p class="text-blue-500 font-semibold uppercase tracking-wider">My Skills</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Technologies I Use</h2>
+            </div>
+
+            <!-- Skills Grid Container -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- 1. Web Design Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-blue-500/50 transition duration-300 shadow-xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-code text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Web Design</h3>
+                            <p class="text-sm text-slate-400">5 technologies</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-orange-500/40 transition">
+                            <i class="fa-brands fa-html5 text-orange-500 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">HTML5</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-blue-500/40 transition">
+                            <i class="fa-brands fa-css3-alt text-blue-500 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">CSS3</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-cyan-500/40 transition">
+                            <i class="fa-solid fa-wind text-cyan-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Tailwind CSS</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-purple-500/40 transition">
+                            <i class="fa-brands fa-bootstrap text-purple-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Bootstrap</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-blue-400/40 transition">
+                            <i class="fa-solid fa-mobile-screen-button text-blue-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Responsive UI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Web Development Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-blue-500/50 transition duration-300 shadow-xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-laptop-code text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Web Development</h3>
+                            <p class="text-sm text-slate-400">6 technologies</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-yellow-400/40 transition">
+                            <i class="fa-brands fa-js text-yellow-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">JavaScript</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-cyan-400/40 transition">
+                            <i class="fa-brands fa-react text-cyan-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">React</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-red-500/40 transition">
+                            <i class="fa-brands fa-git-alt text-red-500 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Git</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-slate-300/40 transition">
+                            <i class="fa-brands fa-github text-slate-200 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">GitHub</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-blue-500/40 transition">
+                            <i class="fa-solid fa-network-wired text-blue-500 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">REST APIs</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-purple-400/40 transition">
+                            <i class="fa-solid fa-bolt text-purple-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Vite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Mobile Apps Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-blue-500/50 transition duration-300 shadow-xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">
+                            <i class="fa-solid fa-mobile text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Mobile Apps</h3>
+                            <p class="text-sm text-slate-400">3 technologies</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-sky-400/40 transition">
+                            <i class="fa-solid fa-mobile-screen text-sky-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Flutter</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-blue-400/40 transition">
+                            <i class="fa-solid fa-code text-blue-400 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Dart</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 rounded-xl bg-slate-950/50 border border-slate-800/60 hover:border-amber-500/40 transition">
+                            <i class="fa-solid fa-fire text-amber-500 text-lg w-6 text-center"></i>
+                            <span class="font-medium text-slate-200">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="py-24 bg-slate-900/50 border-t border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <p class="text-blue-500 font-semibold">Portfolio</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
+                <p class="text-slate-400 text-sm mt-2">Some of my featured web projects</p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500 transition group flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 text-xl font-bold group-hover:bg-blue-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Number Guessing Game</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A multi-screen interactive guessing game built with HTML, Tailwind CSS, and advanced JavaScript DOM manipulation.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-blue-400 bg-blue-500/10 px-3 py-1 rounded-full font-medium">JavaScript</span>
+                        <a href="https://github.com/shajibhasanabd" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-blue-400 flex items-center gap-1.5 transition">
+                            Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500 transition group flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500 text-xl font-bold group-hover:bg-purple-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Team Portfolio Website</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A responsive portfolio website featuring modern UI components, contact forms, and clean styling with Tailwind CSS.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full font-medium">Tailwind CSS</span>
+                        <a href="https://shajibhasanabd.github.io/teamprotfolio/#" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-blue-400 flex items-center gap-1.5 transition">
+                            Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500 transition group flex flex-col justify-between">
+                    <div class="p-6 space-y-3">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-500 text-xl font-bold group-hover:bg-emerald-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white">Flutter Study App</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A cross-platform mobile study application equipped with Firebase authentication, Firestore database, and PDF viewing.
+                        </p>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800/80 flex items-center justify-between">
+                        <span class="text-xs text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full font-medium">Flutter & Firebase</span>
+                        <a href="https://github.com/shajibhasanabd" target="_blank" class="text-sm font-semibold text-slate-300 hover:text-blue-400 flex items-center gap-1.5 transition">
+                            Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section id="testimonials" class="py-24">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="text-center mb-14">
+                <p class="text-blue-500 font-semibold">Client Feedback</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Testimonials</h2>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative shadow-xl">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-3xl text-blue-500/20"></i>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "Shajib delivered an exceptional frontend web interface right on schedule. His attention to detail and clean Tailwind CSS styling made our project look world-class."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center text-blue-400 font-bold">
+                            AR
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Ariful Islam</h4>
+                            <p class="text-slate-500 text-xs">Developer Colleague</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl relative shadow-xl">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-3xl text-blue-500/20"></i>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        "Working with Shajib was fantastic. He quickly understood our project requirements and built a responsive UI that works flawlessly on all mobile devices."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-purple-600/20 flex items-center justify-center text-purple-400 font-bold">
+                            MH
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm">Mehedi Hasan</h4>
+                            <p class="text-slate-500 text-xs">Project Collaborator</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="py-24 bg-slate-900/50 border-t border-slate-800/60">
+        <div class="max-w-4xl mx-auto px-5">
+            <div class="text-center mb-12">
+                <p class="text-blue-500 font-semibold">Contact</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Let's Work Together</h2>
+                <p class="text-slate-400 mt-2">Have a project in mind? Send a message directly to <span class="text-blue-400 font-medium">shajib3444@gmail.com</span></p>
+            </div>
+
+            <!-- Contact Form with Web3Forms -->
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form" class="space-y-5">
+                <input type="hidden" name="access_key" value="21acd165-f31d-4f33-95ec-9767731efa9f">
+                
+                <div class="grid md:grid-cols-2 gap-5">
+                    <input type="text" name="name" placeholder="Your Name" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-5 py-4 outline-none focus:border-blue-500 text-sm">
+                    <input type="email" name="email" placeholder="Your Email" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-5 py-4 outline-none focus:border-blue-500 text-sm">
+                </div>
+                <input type="text" name="subject" placeholder="Subject" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-5 py-4 outline-none focus:border-blue-500 text-sm">
+                <textarea name="message" rows="6" placeholder="Write your message here..." required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-5 py-4 outline-none focus:border-blue-500 text-sm resize-none"></textarea>
+                
+                <button type="submit" class="px-7 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition text-sm shadow-lg shadow-blue-600/20">
+                    Send Message to shajib3444@gmail.com
+                </button>
+            </form>
+            <div id="form-result" class="mt-4 text-center text-sm"></div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="border-t border-slate-800 py-8 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">© 2026 Shajib Hasan Abdullah. All rights reserved.</p>
+                <div class="flex gap-5 text-lg">
+                    <a href="https://github.com/shajibhasanabd" target="_blank" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-blue-500 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="text-slate-500 hover:text-blue-500 transition"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
